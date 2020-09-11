@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Cooking Assistant - List</title>
+<link rel="stylesheet" href="css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+</head>
+
+<body>
+	<div class="listContainer">
+		<!-- Title Element -->
+		<div class="titleBar">
+			<img class="backBtn" src="img/back.png" onclick="location.href='index.html'">
+			<p class="pageTitle" >Recipe List</p>
+			<div class="titleBuffer"></div>
+		</div>
+		<div class="titleSpacer"></div>
+		
+		<!-- searchbar -->
+		<input class="searchBar" onkeyup="searchRecipe()" type="text" id="searchBar" placeholder="Search Recipes.."> 
+		
+		<!-- recipe table -->
+		<table id="recipeTable">
+			<tr onclick="location.href='recipes/pizza.html'">
+				<td><img class="listImg" src="img/pizza.jpg"></td>
+				<td>Pizza</td>
+			</tr>
+			<tr onclick="location.href='recipes/tacos.html'">
+				<td><img class="listImg" src="img/tacos.jpg"></td>
+				<td>Tacos</td>
+			</tr>
+			<tr onclick="location.href='recipes/steak.html'">
+				<td><img class="listImg" src="img/steak.jpg"></td>
+				<td>Steak</td>
+			</tr>
+			<tr onclick="location.href='recipes/spagbol.html'">
+				<td><img class="listImg" src="img/spaghettiBolognese.jpg"></td>
+				<td>Spaghetti Bolognese</td>
+			</tr>
+			<tr onclick="location.href='recipes/donut.html'">
+				<td><img class="listImg" src="img/donut.jpg"></td>
+				<td>Donuts</td>
+			</tr>
+		</table>
+
+	</div>
+	
+</body>
+
+<script type="text/javascript" src="js/javascript.js"></script>

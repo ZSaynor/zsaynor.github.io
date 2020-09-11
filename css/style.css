@@ -1,0 +1,190 @@
+body {
+	margin: 0px;
+	background: #aec0f2;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3vh;
+	color: white;
+}
+
+.homeContainer {
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+
+/* Home Stuff */
+.topDiv {
+	background: #1b42b5;
+	text-align: center;
+	height: 48%;
+	width: 100%;
+}
+
+#logo {
+	max-width: 50%;
+	max-height: 70%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+.grid {
+	width: 49%;
+	height: 24%;
+	background: #d4375c;
+	text-align: center
+}
+
+.grid:hover {
+	background: #bd2d4f;
+}
+
+
+.icon {
+	max-width: 50%;
+	max-height: 70%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+
+/* List Stuff */
+.listContainer {
+	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.titleBar {
+	background: #1b42b5;
+	height: 10vh;
+	width: 100%;
+	align-items: center; 
+	display: flex;
+	position: fixed;
+}
+
+.titleBarOffset {
+	height: 10%;
+	width: 100%;
+	align-items: center; 
+	display: flex;
+}
+
+
+.backBtn {
+	max-height: 8vh;
+	margin: 0px 1vh;
+}
+
+.pageTitle {
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5vh;
+}
+
+.titleBuffer {
+	margin: 0 5vh;
+}
+
+.titleSpacer {
+	margin-bottom: 10vh;
+	width: 100%;
+}
+
+.searchBar {
+	width: 90%;
+	height: 5vh;
+	margin: 2% auto;
+	font-size: 3vh;
+}
+
+#recipeTable {
+	width: 100%;
+	border-collapse:separate; 
+	border-spacing:0 1vh;
+	text-align: center;
+	font-size: 4vh;
+}
+
+#recipeTable tr {
+	background: #d4375c;
+}
+
+#recipeTable tr:hover {
+	background: #bd2d4f;
+}
+
+#recipeTable tr td:first-child{
+    width:1%;
+    white-space:nowrap;
+}
+
+.listImg {
+	max-height: 20vh;
+}
+
+
+
+/* Recipe page Stuff*/
+.recipePage {
+	width: 100%;
+}
+
+.buffer {
+	width: 100%;
+	height: 5vh;
+}
+
+.textBox {
+	width: 92vw;
+	background-color: #d4375c;
+	padding: 0 4vw 2vh;
+}
+
+.subTitle {
+	font-size: 4vh;
+	text-align: center;
+}
+
+.ingredientTable {
+	font-size: 3vh;
+	width: 100%;
+	text-align: left;
+	margin: 0;
+}
+
+.ingredientTable td {
+	width: 50vw;
+	padding: 2%;
+}
+
+ol li {
+	padding: 2vh 0;
+}
+
+.ingredientMsg {
+	text-align: center;
+}
+
+
+/* Incomplete page */
+.textBoxIncomplete {
+	width: 92vw;
+	background-color: #d4375c;
+	padding: 0 4vw 2vh;
+	text-align: center;
+}
+
+.noticeImg {
+	max-width: 70vw;
+	max-height: 40vh;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Cooking Assistant - Donuts</title>
+<link rel="stylesheet" href="../css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+</head>
+
+<body>
+	<div class="listContainer">
+		<!-- Title Element -->
+		<div class="titleBar">
+			<img class="backBtn" src="../img/back.png" onclick="location.href='../list.html'">
+			<p class="pageTitle" >Donuts</p>
+			<div class="titleBuffer"></div>
+		</div>
+		<div class="titleSpacer"></div>
+		
+		
+		<!-- Main image -->
+		<img class="recipePage" src="../img/donut.jpg">
+		
+		
+		<div class="buffer"></div>
+		
+		<!-- Ingredients -->
+		<div class="textBox">
+			<p class="subTitle" >Ingredients</p>
+			<table class="ingredientTable">
+				<tr>
+					<td><label><input type="checkbox" name="ingcheck" onclick='checkboxScan()'/>Ingredient 1</label></td>
+					<td><label><input type="checkbox" name="ingcheck" onclick='checkboxScan()'/>Ingredient 6</label></td>
+				</tr>
+				<tr>
+					<td><label><input type="checkbox" name="ingcheck" onclick='checkboxScan()'/>Ingredient 2</label></td>
+					<td><label><input type="checkbox" name="ingcheck" onclick='checkboxScan()'/>Ingredient 7</label></td>
+				</tr>
+				<tr>
+					<td><label><input type="checkbox" name="ingcheck" onclick='checkboxScan()'/>Ingredient 3</label></td>
+					<td><label><input type="checkbox" name="ingcheck" onclick='checkboxScan()'/>Ingredient 8</label></td>
+				</tr>
+				<tr>
+					<td><label><input type="checkbox" name="ingcheck" onclick='checkboxScan()'/>Ingredient 4</label></td>
+					<td><label><input type="checkbox" name="ingcheck" onclick='checkboxScan()'/>Ingredient 9</label></td>
+				</tr>
+				<tr>
+					<td><label><input type="checkbox" name="ingcheck" onclick='checkboxScan()'/>Ingredient 5</label></td>
+					<td><label><input type="checkbox" name="ingcheck" onclick='checkboxScan()'/>Ingredient 10</label></td>
+				</tr>
+			</table>
+			
+			<p class="ingredientMsg">You do not have all the ingredients</p>
+			
+		</div>
+		
+		
+		<div class="buffer"></div>
+		
+		
+		<!-- Prep Instructions -->
+		<div class="textBox" >
+			<p class="subTitle" >Preparation Instructions</p>
+			<ol>
+				<li>Cooking instructions go here as well as any other things that are required to successfully cook the recipe</li>
+				<li>It will continue for as many steps as necessary</li>
+				<li>More steps...</li>
+			</ol>		
+		</div>
+		
+	</div>
+</body>
+
+<script type="text/javascript" src="../js/javascript.js"></script>
