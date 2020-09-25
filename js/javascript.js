@@ -46,3 +46,83 @@ function checkboxScan() {
 	}
 	document.getElementsByClassName("ingredientMsg")[0].innerHTML = "You have all the ingredients"
 }
+
+
+
+
+// Changes the image source of the favourite star based on whether recipe is favourited
+function favCheck() {
+	// get favorites from local storage or empty array
+	var favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+	
+	// gets the element with class favBtn
+	var favID = document.getElementsByClassName("favBtn")
+	
+	// gets the name of favID element
+	var favName = favID[0].getAttribute("name");
+	
+	// finds index of favID
+	var favIndex = favourites.indexOf(favName);
+
+	// if favID in favourites array then image is favourite star else is nonfavourite star
+	if(favIndex !== -1) {
+		// sets image to favourited
+		favID[0].src = "../img/favourites.png"
+		
+	} else {		
+		// Sets image to unfavourited
+		favID[0].src = "../img/nonfavourite.png";
+	}	
+};
+
+
+
+try {
+	// Used to add strings representing favourite recipes to local storage
+	document.querySelector('.favBtn').addEventListener('click', function(fav) {
+
+		// get favorites from local storage or empty array
+		var favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+		
+		// sets favID to name of fav button
+		var favID = fav.target.name;
+		
+		// finds index of favID
+		var favIndex = favourites.indexOf(favID);
+
+		// if favID in favourites array then gets removed
+		if(favIndex !== -1) {
+			favourites.splice(favIndex, 1);
+			
+			// Sets image to unfavourited
+			fav.target.src = "../img/nonfavourite.png"
+			
+		// else gets added to favourites array
+		} else {
+			favourites.push(favID);
+			
+			// sets image to favourited
+			fav.target.src = "../img/favourites.png"
+		}
+		
+		
+		// sets favourites array into localStorage
+		localStorage.setItem('favourites', JSON.stringify(favourites));
+		
+		console.log(favourites);
+	});
+} catch(err) {
+	console.log("favourite Button not on page")
+}
+
+
+
+/*
+//function for displaying favourites
+function favDisplay() {
+	// get favorites from local storage or empty array
+	var favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+		
+	
+};
+*/

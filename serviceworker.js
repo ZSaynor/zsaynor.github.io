@@ -1,5 +1,5 @@
 var CACHE_TITLE = 'CookingAssistant-Cache';
-var CACHE_VERSION = 'v6';
+var CACHE_VERSION = 'v7';
 var CACHE_NAME = CACHE_TITLE + '-' + CACHE_VERSION;
 var urlsToCache = [
   '/index.html',
@@ -17,6 +17,7 @@ var urlsToCache = [
   '/img/back.png',
   '/img/list.png',
   '/img/favourites.png',
+  '/img/nonfavourite.png',
   '/img/ingredients.png',
   '/img/settings.png',
   '/img/donut.jpg',
