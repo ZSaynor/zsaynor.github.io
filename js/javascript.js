@@ -35,6 +35,31 @@ function searchRecipe() {
     }
 }
 
+//searchbar functionality for fav list page, same as searchBar but runs favDisplay() at the end
+function searchRecipe2() {
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("searchBar");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("recipeTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 1; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+	favDisplay();
+}
+
+
 //Used in ingredient checkbox on recipe detail page
 function checkboxScan() {
 	var boxes = document.getElementsByName('ingcheck');
@@ -117,12 +142,39 @@ try {
 
 
 
-/*
-//function for displaying favourites
+
+//function for displaying favourites only on favlist page
 function favDisplay() {
 	// get favorites from local storage or empty array
 	var favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+	
+	// gets basic variables for table and tr elements
+	var table = document.getElementById("recipeTable");
+	var tr = table.getElementsByTagName("tr");
+	
+	// array used for names of each tr element
+	var tableListNames = [];
+	
+	// gets all names of tr elements and adds to tableListNames array
+	for (i = 0; i < tr.length; i++) {
+		tableListNames.push(tr[i].getAttribute("name"));
+	}
+	
+	// for loop through entire tableListNames array
+	for (i = 0; i < tableListNames.length; i++) {
 		
+		// checks if the favourites contains a string equal to the name of a tr
+		if(favourites.includes(tableListNames[i])) {
+		} else {
+			// hides tr if name not in favourites
+			tr[i].style.display = "none";
+		}
+	}
+
 	
 };
-*/
+
+
+function previousPage() {
+	window.history.go(-1);
+}

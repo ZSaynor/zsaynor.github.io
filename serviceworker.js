@@ -1,9 +1,10 @@
 var CACHE_TITLE = 'CookingAssistant-Cache';
-var CACHE_VERSION = 'v7';
+var CACHE_VERSION = 'v8';
 var CACHE_NAME = CACHE_TITLE + '-' + CACHE_VERSION;
 var urlsToCache = [
   '/index.html',
   '/list.html',
+  '/favlist.html',
   '/incomplete.html',
   '/recipes/donut.html',
   '/recipes/pizza.html',
