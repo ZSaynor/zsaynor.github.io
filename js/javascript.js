@@ -134,7 +134,6 @@ try {
 		// sets favourites array into localStorage
 		localStorage.setItem('favourites', JSON.stringify(favourites));
 		
-		console.log(favourites);
 	});
 } catch(err) {
 	console.log("favourite Button not on page")

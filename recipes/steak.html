@@ -8,13 +8,13 @@
 </head>
 
 <body onload="favCheck()">
-	<div class="listContainer">
+	<main class="listContainer">
 		<!-- Title Element -->
-		<div class="titleBar">
+		<nav class="titleBar">
 			<img class="backBtn" src="../img/back.png" onclick="previousPage()">
 			<p class="pageTitle" >Steak</p>
 			<img name="steak" class="favBtn" src="">
-		</div>
+		</nav>
 		<div class="titleSpacer"></div>
 		
 		
@@ -22,10 +22,16 @@
 		<img class="recipePage" src="../img/steak.jpg">
 		
 		
+		<!-- Difficulty Stats -->
+		<section class="textBox" >
+			<p class="subTitle" >Difficulty: 3/5</p>
+		</section>
+		
+		
 		<div class="buffer"></div>
 		
 		<!-- Ingredients -->
-		<div class="textBox">
+		<section class="textBox">
 			<p class="subTitle" >Ingredients</p>
 			<table class="ingredientTable">
 				<tr>
@@ -52,23 +58,23 @@
 			
 			<p class="ingredientMsg">You do not have all the ingredients</p>
 			
-		</div>
+		</section>
 		
 		
 		<div class="buffer"></div>
 		
 		
 		<!-- Prep Instructions -->
-		<div class="textBox" >
+		<section class="textBox" >
 			<p class="subTitle" >Preparation Instructions</p>
 			<ol>
 				<li>Cooking instructions go here as well as any other things that are required to successfully cook the recipe</li>
 				<li>It will continue for as many steps as necessary</li>
 				<li>More steps...</li>
 			</ol>		
-		</div>
+		</section>
 		
-	</div>
+	</main>
 </body>
 
 <script type="text/javascript" src="../js/javascript.js"></script>
